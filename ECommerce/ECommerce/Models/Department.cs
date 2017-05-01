@@ -13,6 +13,7 @@ namespace ECommerce.Models
 
         [Required(ErrorMessage ="O campo {0} é origatório")]
         [MaxLength(50, ErrorMessage ="O campo {0} deverá ter no máximo {1} caracteres")]
+        [Display(Name = "Department")]
         public string Name { get; set; }
     }
 }
