@@ -15,5 +15,7 @@ namespace ECommerce.Models
         [MaxLength(50, ErrorMessage ="O campo {0} deverá ter no máximo {1} caracteres")]
         [Display(Name = "Department")]
         public string Name { get; set; }
+
+        public virtual ICollection<City> Cities { get; set; }
     }
 }
