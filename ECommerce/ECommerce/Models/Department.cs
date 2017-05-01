@@ -14,5 +14,7 @@ namespace ECommerce.Models
         [Required(ErrorMessage ="O campo {0} é origatório")]
         [MaxLength(50, ErrorMessage ="O campo {0} deverá ter no máximo {1} caracteres")]
         public string Name { get; set; }
+
+        public virtual ICollection<City> Cities { get; set; }
     }
 }
