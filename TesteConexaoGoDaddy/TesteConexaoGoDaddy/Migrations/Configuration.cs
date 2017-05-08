@@ -1,18 +1,20 @@
-namespace ECommerce.Migrations
+namespace TesteConexaoGoDaddy.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ECommerce.Models.ECommerceContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<TesteConexaoGoDaddy.Models.EFContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
+            ContextKey = "TesteConexaoGoDaddy.Models.EFContext";
         }
 
-        protected override void Seed(ECommerce.Models.ECommerceContext context)
+        protected override void Seed(TesteConexaoGoDaddy.Models.EFContext context)
         {
             //  This method will be called after migrating to the latest version.
 
