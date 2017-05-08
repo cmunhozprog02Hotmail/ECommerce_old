@@ -38,7 +38,7 @@ namespace ECommerce.Models
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasMaxLength(100));
 
-            base.OnModelCreating(modelBuilder);
+            
             
         }
 

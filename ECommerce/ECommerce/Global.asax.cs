@@ -16,6 +16,7 @@ namespace ECommerce
     {
         protected void Application_Start()
         {
+            
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ECommerceContext, Configuration>());
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);

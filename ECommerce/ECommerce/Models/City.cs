@@ -13,6 +13,7 @@ namespace ECommerce.Models
         public string Name { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é origatório")]
+        [Range(1, double.MaxValue, ErrorMessage ="You must select a {0}")]
         public int DepartmentId { get; set; }
 
         public Department Department { get; set; }
