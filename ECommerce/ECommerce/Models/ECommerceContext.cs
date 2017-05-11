@@ -14,9 +14,11 @@ namespace ECommerce.Models
 
         }
 
-        public DbSet<ECommerce.Models.Department> Departments { get; set; }
+        public DbSet<Department> Departments { get; set; }
 
-        public DbSet<ECommerce.Models.City> Cities { get; set; }
+        public DbSet<City> Cities { get; set; }
+
+        public DbSet<Company> Companies { get; set; }
 
        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace ECommerce.Models
 {
@@ -16,6 +19,10 @@ namespace ECommerce.Models
         [Range(1, double.MaxValue, ErrorMessage ="You must select a {0}")]
         public int DepartmentId { get; set; }
 
-        public Department Department { get; set; }
+        public virtual Department Department { get; set; }
+
+        public virtual ICollection<Company> Companies { get; set; }
+
+        
     }
 }

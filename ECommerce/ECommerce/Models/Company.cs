@@ -28,9 +28,19 @@ namespace ECommerce.Models
         [DataType(DataType.PhoneNumber)]
         public string Address { get; set; }
 
+        [DataType(DataType.ImageUrl)]
+        public string Logo { get; set; }
 
+        [Required(ErrorMessage = "O campo {0} é origatório")]
+        [Range(1, double.MaxValue, ErrorMessage = "You must select a {0}")]
+        public int DepartmentId { get; set; }
 
-        public virtual ICollection<City> Cities { get; set; }
+        [Required(ErrorMessage = "O campo {0} é origatório")]
+        [Range(1, double.MaxValue, ErrorMessage = "You must select a {0}")]
+        public int CityId { get; set; }
+
+        public virtual Department Department { get; set; }
+
+        public virtual City City { get; set; }
     }
-}
 }
