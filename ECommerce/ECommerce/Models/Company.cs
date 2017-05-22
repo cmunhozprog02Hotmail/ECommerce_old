@@ -33,10 +33,12 @@ namespace ECommerce.Models
 
         [Required(ErrorMessage = "O campo {0} é origatório")]
         [Range(1, double.MaxValue, ErrorMessage = "You must select a {0}")]
+        [Display(Name = "Department")]
         public int DepartmentId { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é origatório")]
         [Range(1, double.MaxValue, ErrorMessage = "You must select a {0}")]
+        [Display(Name = "City")]
         public int CityId { get; set; }
 
         public virtual Department Department { get; set; }
