@@ -128,6 +128,13 @@ namespace ECommerce.Controllers
             return RedirectToAction("Index");
         }
 
+        public JsonResult GetCities(int departmentId)
+        {
+            db.Configuration.ProxyCreationEnabled = false;            
+            var cities = db.Cities.Where(c => c.DepartmentId == departmentId);
+            return Json(cities);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
